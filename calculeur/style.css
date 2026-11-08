@@ -1,0 +1,105 @@
+:root {
+  --terracotta: #C65D3B;
+  --vert: #1F3D2B;
+  --jaune: #F2B632;
+  --fond: #FBF5EA;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: var(--vert);
+  font-family: Arial, sans-serif;
+}
+
+.carte {
+  width: 100%;
+  max-width: 420px;
+  background: var(--fond);
+  border-radius: 24px;
+  padding: 28px 24px;
+  border-top: 8px solid var(--jaune);
+}
+
+h1 {
+  margin: 0 0 4px;
+  color: var(--terracotta);
+}
+
+.intro {
+  margin: 0 0 20px;
+  color: var(--vert);
+}
+
+label {
+  display: block;
+  margin: 14px 0 6px;
+  font-weight: bold;
+  color: var(--vert);
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  border: 2px solid var(--vert);
+  border-radius: 10px;
+  background: #fff;
+}
+
+input:focus {
+  outline: 3px solid var(--jaune);
+}
+
+button {
+  width: 100%;
+  margin-top: 22px;
+  padding: 14px;
+  font-size: 1.05rem;
+  font-weight: bold;
+  color: #fff;
+  background: var(--terracotta);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: var(--vert);
+}
+
+.message {
+  min-height: 1.2em;
+  margin: 12px 0 0;
+  color: var(--terracotta);
+  font-weight: bold;
+}
+
+.resultat {
+  margin-top: 16px;
+  padding: 16px;
+  background: #fff;
+  border-left: 6px solid var(--jaune);
+  border-radius: 10px;
+  color: var(--vert);
+}
+
+.resultat p {
+  margin: 6px 0;
+}
+
+.total {
+  font-size: 1.2rem;
+}
+
+.cache {
+  display: none;
+}

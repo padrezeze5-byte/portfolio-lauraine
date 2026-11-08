@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Ménagère Mafina Services - Bingerville</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Sora:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="container nav-inner">
+      <div class="logo">mafina<span>.services</span></div>
+      <div class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#tarifs">Tarifs</a>
+        <a href="#avis">Avis</a>
+        <a href="#contact" class="btn-small">Réserver</a>
+      </div>
+      <button class="burger" onclick="toggleMenu()">☰</button>
+    </div>
+    <div id="mobileMenu" class="mobile-menu">
+      <a href="#services">Services</a>
+      <a href="#tarifs">Tarifs</a>
+      <a href="#avis">Avis</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="badge">✨ Disponible aujourd'hui à Bingerville & Cocody</div>
+        <h1>Votre maison <span class="pink">nickel</span>,<br>sans lever le petit doigt</h1>
+        <p class="hero-p">Ménage, lessive, vaisselle, désinfection. On s'occupe de tout pendant que vous travaillez.</p>
+        <div class="hero-btns">
+          <a href="tel:0585961379" class="btn btn-dark">📞 05 85 96 13 79</a>
+          <a href="https://wa.me/2250585961379?text=Bonjour%20Mafina,%20je%20veux%20un%20devis%20ménage" target="_blank" class="btn btn-green">WhatsApp Devis</a>
+        </div>
+        <div class="trust">
+          <div class="avatars"><span>👩🏾</span><span>👩🏾‍🦱</span><span>👩🏾</span></div>
+          <p><strong>350+ familles</strong> nous font confiance à Abidjan</p>
+        </div>
+      </div>
+      <div class="hero-card">
+        <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?q=80&w=600" alt="ménage">
+        <div class="floating-card">✅ Intervention en 2h<br><small>Bingerville - Riviera - Cocody</small></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- SERVICES -->
+  <section id="services" class="section">
+    <div class="container">
+      <h2>Nos 5 services choc</h2>
+      <div class="grid-5">
+        <div class="card"><div class="icon pink-bg">🧺</div><h3>Lessive & Repassage</h3><p>Panier rose qui déborde ? On lave, sèche, plie. 300F/kg</p></div>
+        <div class="card"><div class="icon green-bg">🧹</div><h3>Ménage Complet</h3><p>Sol, poussière, salle de bain. Produits inclus. 5000F/heure</p></div>
+        <div class="card"><div class="icon yellow-bg">🍽️</div><h3>Vaisselle Brillante</h3><p>Montagne d'assiettes ? On s'en occupe. 2000F / cuisine</p></div>
+        <div class="card"><div class="icon blue-bg">🦟</div><h3>Désinfection</h3><p>Pulvérisateur Farmstar, anti-cafards & moustiques. Sur devis</p></div>
+        <div class="card"><div class="icon red-bg">🚽</div><h3>Toilettes & Détartrage</h3><p>Vileda pro, Aigle, javel. Toilettes comme neuves</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TARIFS -->
+  <section id="tarifs" class="section bg-light">
+    <div class="container">
+      <h2>Tarifs clairs, pas de surprise</h2>
+      <div class="pricing-grid">
+        <div class="price-card"><h3>Ménage Express</h3><div class="price">2000<span>F / heure</span></div><ul><li>✅ 2 pièces + salon</li><li>✅ Produits inclus</li><li>✅ 2h minimum</li></ul><button onclick="devis('Ménage Express')">Réserver</button></div>
+        <div class="price-card featured"><div class="pop">Le + demandé</div><h3>Pack Famille</h3><div class="price">12000<span>F / jour</span></div><ul><li>✅ Ménage + Lessive + Vaisselle</li><li>✅ 5h sur place</li><li>✅ 1 femme formée</li></ul><button onclick="devis('Pack Famille')">Réserver</button></div>
+        <div class="price-card"><h3>Lessive Kilo</h3><div class="price">300<span>F / kg</span></div><ul><li>✅ Lavé + plié en 24h</li><li>✅ Livraison 1000F</li><li>✅ Repassage +200F/kg</li></ul><button onclick="devis('Lessive Kilo')">Réserver</button></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section bg-dark">
+    <div class="container contact-grid">
+      <div>
+        <h2>On réserve pour demain ?</h2>
+        <p>Appel direct ou WhatsApp, réponse en 5 min.</p>
+        <div class="contact-btns">
+          <a href="tel:0585961379" class="btn btn-pink">📞 Appeler 05 85 96 13 79</a>
+          <a href="https://wa.me/2250585961379" class="btn btn-white">WhatsApp</a>
+        </div>
+      </div>
+      <form class="form" onsubmit="sendWhatsApp(event)">
+        <input type="text" id="nom" placeholder="Ton nom" required>
+        <input type="text" id="service" placeholder="Service (Ménage, Lessive...)" required>
+        <textarea id="msg" placeholder="Adresse + jour voulu" required></textarea>
+        <button type="submit">Envoyer sur WhatsApp</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>© 2026 La Ménagère Mafina Services - Bingerville - Créé par Lauraine Zeze</footer>
+  <a href="https://wa.me/2250585961379" class="whatsapp-float">💬</a>
+  <script src="script.js"></script>
+</body>
+</html>

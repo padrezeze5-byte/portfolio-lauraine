@@ -1,0 +1,148 @@
+:root {
+  --terracotta: #C65D3B;
+  --vert: #1F3D2B;
+  --jaune: #F2B632;
+  --fond: #FBF5EA;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--fond);
+  color: var(--vert);
+  font-family: Arial, sans-serif;
+}
+
+.entete {
+  background: var(--vert);
+  color: #FBF5EA;
+  text-align: center;
+  padding: 32px 20px;
+  border-radius: 0 0 32px 32px;
+}
+
+.entete h1 {
+  margin: 0 0 6px;
+  color: var(--jaune);
+}
+
+.entete p {
+  margin: 0;
+}
+
+.page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 24px 16px 48px;
+}
+
+h2 {
+  color: var(--terracotta);
+}
+
+/* Grille de produits : s'adapte toute seule à l'écran */
+.grille {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+}
+
+.produit {
+  background: #fff;
+  border-top: 6px solid var(--terracotta);
+  border-radius: 16px;
+  padding: 16px;
+  text-align: center;
+}
+
+.produit .image {
+  font-size: 3.5rem;
+  background: var(--fond);
+  border-radius: 12px;
+  padding: 12px;
+}
+
+.produit h3 {
+  margin: 12px 0 4px;
+}
+
+.prix {
+  margin: 0 0 12px;
+  font-weight: bold;
+  color: var(--terracotta);
+}
+
+button,
+.bouton {
+  display: inline-block;
+  padding: 10px 18px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  background: var(--terracotta);
+  border: none;
+  border-radius: 10px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+button:hover,
+.bouton:hover {
+  background: var(--vert);
+}
+
+/* Panier */
+.panier {
+  margin-top: 32px;
+  background: #fff;
+  border-left: 6px solid var(--jaune);
+  border-radius: 16px;
+  padding: 16px 20px;
+}
+
+#liste-panier {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#liste-panier li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 10px 0;
+  border-bottom: 1px solid #eadfcb;
+}
+
+.quantite {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.quantite button {
+  padding: 4px 12px;
+}
+
+.total-ligne {
+  font-size: 1.2rem;
+}
+
+.bouton-clair {
+  background: transparent;
+  color: var(--vert);
+  border: 2px solid var(--vert);
+  margin-right: 8px;
+}
+
+.bouton-clair:hover {
+  color: #fff;
+}
+
+.cache {
+  display: none;
+}

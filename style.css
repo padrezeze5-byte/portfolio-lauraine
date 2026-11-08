@@ -1,0 +1,139 @@
+:root {
+  --terracotta: #C65D3B;
+  --vert: #1F3D2B;
+  --jaune: #F2B632;
+  --fond: #FBF5EA;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  background: var(--fond);
+  color: var(--vert);
+  line-height: 1.7;
+}
+
+/* GRANDE ZONE D'ACCUEIL */
+.hero {
+  background: var(--vert);
+  color: #FBF5EA;
+  text-align: center;
+  padding: 40px 24px 56px;
+  border-radius: 0 0 40px 40px;
+}
+
+/* LA PHOTO : grande, en arche, avec cadre jaune décalé */
+.photo {
+  display: block;
+  width: min(340px, 80%);
+  aspect-ratio: 4 / 5;
+  margin: 0 auto 36px;
+  object-fit: cover;
+  border-radius: 200px 200px 24px 24px;
+  background: var(--terracotta);
+  box-shadow: 14px 14px 0 var(--jaune);
+}
+
+.hero h1 {
+  margin: 0 0 8px;
+  font-size: 2.6rem;
+  line-height: 1.1;
+}
+
+.metier {
+  margin: 0 0 16px;
+  color: var(--jaune);
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+}
+
+.accroche {
+  max-width: 480px;
+  margin: 0 auto 24px;
+  font-style: italic;
+}
+
+.bouton {
+  display: inline-block;
+  background: var(--terracotta);
+  color: #fff;
+  padding: 12px 28px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+}
+
+/* SUR GRAND ÉCRAN (ordinateur) : photo à gauche, texte à droite */
+@media (min-width: 800px) {
+  .hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 64px;
+    text-align: left;
+    padding: 64px 40px;
+  }
+  .photo {
+    width: 360px;
+    margin: 0;
+  }
+  .accroche {
+    margin-left: 0;
+  }
+  .hero h1 {
+    font-size: 3.4rem;
+  }
+}
+
+/* CONTENU */
+main {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+h2 {
+  color: var(--terracotta);
+  font-family: Arial, sans-serif;
+  font-size: 1.6rem;
+}
+
+h2::after {
+  content: "";
+  display: block;
+  width: 56px;
+  height: 5px;
+  margin-top: 6px;
+  background: var(--jaune);
+  border-radius: 3px;
+}
+
+.vision {
+  border-left: 5px solid var(--terracotta);
+  padding-left: 14px;
+  font-style: italic;
+}
+
+/* CONTACT */
+.contact {
+  background: var(--terracotta);
+  color: #fff;
+  text-align: center;
+  padding: 28px 20px;
+  font-family: Arial, sans-serif;
+  border-radius: 32px 32px 0 0;
+}
+
+.contact p {
+  margin: 0 0 4px;
+}
+
+.contact a {
+  color: var(--jaune);
+  font-weight: bold;
+}

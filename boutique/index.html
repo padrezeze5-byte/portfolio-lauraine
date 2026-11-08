@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini-boutique</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="entete">
+    <h1>Ma mini-boutique</h1>
+    <p>Des produits faits avec soin à Abidjan</p>
+  </header>
+
+  <main class="page">
+    <section>
+      <h2>Produits</h2>
+      <div id="produits" class="grille"></div>
+    </section>
+
+    <section class="panier">
+      <h2>Mon panier</h2>
+      <p id="vide">Ton panier est vide.</p>
+      <ul id="liste-panier"></ul>
+      <p class="total-ligne">Total : <strong id="total">0 FCFA</strong></p>
+      <button id="vider" class="bouton-clair">Vider le panier</button>
+      <a id="commander" class="bouton" href="#">Commander sur WhatsApp</a>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
